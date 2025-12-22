@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Products{% endblock title %}
+{% block body_class %}page-products{% endblock body_class %}
+{% block content %}
+
+<!-- PRODUCT SECTION -->
+<section class="products-section ">
+    <div class="container text-center">
+        <h2 class="section-title">{{site_settings.products_title}}</h2>
+        <p class="section-subtitle">
+           {{site_settings.products_subtitle}}
+        </p>
+    </div>
+</section>
+
+<!-- PRODUCT PAGE -->
+<section class="product-page py-5">
+    <div class="container">
+        <div class="row">
+
+            <!-- LEFT CATEGORY COLUMN -->
+            <div class="col-lg-3  col-md-4 mb-4">
+                <div class="categories-box p-3">
+                    <h5 class="category-title">Categories</h5>
+                    <div class="category-title-line"></div>
+
+                    <ul class="list-unstyled mt-3 category-list">
+                        <li>
+                            <span class="dot"></span>
+                            <a href="{%url 'products' %}" 
+                               class="category-link {% if not active_category %}active{% endif %}">
+                                All Products
+                            </a>
+                        </li>
+                        {% for cat in all_categories %}
+                            <li>
+                                <span class="dot"></span>
+                                <a href="{%url 'products' %}?category={{cat.slug}}"
+                                class="category-link {% if active_category == cat.slug%}active{% endif %}">{{ cat.title }}</a>
+                            </li>
+                         {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- PRODUCT GRID -->
+            <div class="col-lg-9 col-md-8">
+                <div class="row g-3">
+
+                    {% for product in products %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="product-card"
+                             data-category="{{ product.category }}"
+                             data-title="{{ product.name }}"
+                             data-desc="{{ product.description }}"
+                             data-price="{{ product.price }}"
+                             data-image="{{ product.product_image.url }}"
+                             data-phone="{{ site_settings.whatsapp_number }}"
+                             data-whatsapp="I want to order {{ product.name }}">
+                    
+                            <img src="{{ product.product_image.url }}" class="product-img" alt="{{ product.name }}">
+                    
+                            <div class="product-header">
+                                <h5 class="product-name">{{ product.name }}</h5>
+                                <div class="product-price">
+                                    ₹{{ product.price }}<span>/{{ product.unit }}</span>
+                                </div>
+                            </div>
+                    
+                            <button class="whatsapp-btn">
+                                <i class="bi bi-whatsapp"></i> Whatsapp to order
+                            </button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+
+<!-- PRODUCT MODAL -->
+<div class="modal fade" id="productModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content product-modal">
+
+            <img id="modalImage" class="product-modal-img" alt="Product image">
+
+            <div class="px-4 py-3">
+                <h4 id="modalTitle" class="modal-product-title"></h4>
+                <p id="modalDescription" class="modal-product-description"></p>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="modal-price">
+                        ₹<span id="modalPrice"></span>
+                        <span class="price-kg">/kg</span>
+                    </div>
+                    <a class="whatsapp-btn-modal" target="_blank">
+                        <i class="bi bi-whatsapp"></i> Whatsapp to order
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const phone = card.dataset.phone;
+        const title = card.dataset.title;
+        const description = card.dataset.desc;
+        const price = card.dataset.price;
+        const image = card.dataset.image;
+        const whatsappText = card.dataset.whatsapp;
+
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalDescription').innerText = description;
+        document.getElementById('modalPrice').innerText = price;
+        document.getElementById('modalImage').src = image;
+
+        const whatsappLink =
+            `https://wa.me/${phone}?text=${encodeURIComponent(whatsappText)}`;
+
+        const modalWhatsappButton =
+            document.querySelector('#productModal .whatsapp-btn-modal');
+
+        modalWhatsappButton.href = whatsappLink;
+
+        new bootstrap.Modal(
+            document.getElementById('productModal')
+        ).show();
+    });
+});
+
+</script>
+{% endblock extra_js %}
+
+

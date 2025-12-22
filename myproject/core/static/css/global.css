@@ -1,0 +1,1946 @@
+/* ============================================================
+   GLOBAL BASE STYLES
+============================================================ */
+body {
+    font-family: 'Jost', sans-serif;
+    background: #FFFCF5;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Remove padding inconsistencies */
+
+
+/* ============================================================
+   HOME PAGE — HERO SECTION
+============================================================ */
+.page-home .hero-left-text {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+}
+.page-home .hero-section {
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+}
+.page-home .hero-title {
+    font-size: 48px;
+    line-height: 1.3;
+    margin-right: -100px;
+    padding-top: 120px;
+}
+
+.page-home .hero-subtext {
+    font-size: 16px;
+    color: #444;
+}
+
+.page-home .hero-image {
+    width: 700px;
+    height: 448px;
+    margin-top: -97px;
+    margin-left: -40px;
+    object-fit: contain;
+}
+
+/* ============================================================
+   HOME PAGE — CATEGORY CARDS
+============================================================ */
+.page-home .category-card {
+
+    object-fit: contain;
+    width: 160px;
+    height: 160px;
+    opacity: 1;
+
+}
+
+.page-home .category-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* ============================================================
+   BUTTONS — SHARED ON HOMEPAGE
+============================================================ */
+.page-home .shop-now { 
+    background: #5B1A0F;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 600;
+    text-decoration: none;
+    width: 160px;
+    height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-home .shop-now:hover {
+    opacity: 0.9;
+}
+
+/* "View more" text link */
+.page-home .view-more {
+    font-size: 14px;
+    margin-top: 8px;
+    display: inline-block;
+    color: #7a2012;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.page-home .know-more {
+    font-size: 14px;
+    margin-top: 8px;
+    display: inline-block;
+    color: #7a2012;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+    margin-left: 100px;
+}
+.page-home .know-more:hover {
+    text-decoration: underline;
+    transform: translateX(3px);
+}
+
+.page-home .view-more:hover {
+    text-decoration: underline;
+    transform: translateX(3px);
+}
+
+/* ============================================================
+   HOMEPAGE RESPONSIVE — HERO & CATEGORY
+============================================================ */
+@media (max-width: 576px) {
+    .page-home .hero-title {
+        font-size: clamp(28px, 5vw, 48px);
+        line-height: 1.3;
+        margin: 10px auto 0;
+        max-width: 100%;
+        padding-top: 120px;
+        margin-right: 0px;
+    }
+    .page-home .know-more {
+        margin-left: 0px;
+    }
+    .page-home .hero-image {
+        width: 100%;
+        height: auto;
+        margin: 32px auto 0; /* top margin + horizontal centering */
+        max-width: 320px; 
+        margin-left: 0;
+    }
+    .page-home .hero-section {
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    .page-home .hero-left-text {
+        padding: 0px;
+    }
+    .page-home .category-card {
+        height: 110px;
+    }
+
+    .page-home .category-title {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-home .hero-title {
+        font-size: 30px;
+    }
+
+    .page-home .hero-image {
+        width: 90%;
+        margin: auto;
+        align-items: center;
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .page-home .hero-section {
+        text-align: center;
+    }
+}
+
+/* ============================================================
+   HOME — TRADITION SECTION
+============================================================ */
+.page-home .tradition-section {
+    background: #F6E9D9;
+}
+
+.page-home .tradition-img {
+    width: 480px;
+    height: 286px;
+    border-radius: 8px;
+    opacity: 1;    
+    margin-left: -50px;
+}
+
+.page-home .tradition-title {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-left: 100px;
+    line-height: 1.3;
+    margin-right: -60px;
+}
+
+.page-home .tradition-text {
+    font-size: 16px;
+    color: #444;
+    font-style: Medium;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-left: 100px;
+    line-height: 1.3;
+}
+
+/* Tradition responsive */
+@media (max-width: 576px) {
+    .page-home .tradition-title {
+        font-size: 24px;
+        margin-left: 0px;
+        line-height: 1.3;
+        margin-right: 0px;
+    }
+
+    .page-home .tradition-text {
+        font-size: 15px;
+        line-height: 100%;
+        margin-left: 0px;
+        line-height: 1.4;
+    }
+
+    .page-home .tradition-img {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-home .tradition-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 992px) {
+    .page-home .tradition-section {
+        text-align: center;
+    }
+}
+
+/* ============================================================
+   HOME — PRODUCT CARDS (Homepage Version)
+============================================================ */
+.product-card {
+    background: #fff;
+    border-radius: 20px;
+    border: 1.5px solid #ddd;
+    padding: 12px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.product-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #5a1a16;
+}
+
+.product-price span {
+    font-size: 10px;
+    color: #777;
+}
+
+.whatsapp-btn {
+    width: 100%;
+    background: #e9d5c5;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #5a1a16;
+    cursor: pointer;
+}
+
+
+/* Product responsiveness */
+@media (max-width: 576px) {
+    .product-img {
+        height: 150px;
+    }
+
+     .product-name {
+        font-size: 14px;
+    }
+
+     .product-price {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-home .product-img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 992px) {
+    .page-home .best-title,
+    .page-home .best-subtitle {
+        text-align: left;
+    }
+}
+
+/* ============================================================
+   HOME — STILL CRAVING SECTION
+============================================================ */
+.page-home .spice-img {
+    height: 180px;
+    width: 250px;
+    object-fit: contain;
+    margin-left: auto;
+    display: block;
+}
+
+.page-home .View-all-Products {
+    background: #5B1A0F;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.page-home .View-all-Products:hover {
+    opacity: 0.9;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+    .page-home .spice-img {
+        height: 130px;
+        margin: 0 auto;
+        display: none;
+    }
+    .page-home .still-craving-goodness {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    .page-home .View-all-Products {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-home .still-craving-goodness {
+        font-size: 28px;
+    }
+}
+
+/* Reset row spacing
+.page-home .row {
+    margin-right: 0;
+    margin-left: 0;
+} */
+
+/* ============================================================
+   PRODUCT PAGE — GENERAL STYLES
+============================================================ */
+.page-products a {
+    text-decoration: none;
+}
+
+.page-products .products-section {
+    background-color: #F6E5C9;
+    padding: 20px 80px;
+    margin-top: 97px;
+}
+
+.page-products .section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+.page-products .section-subtitle {
+    font-size: 1rem;
+    color: #484848;
+}
+
+/* ============================================================
+   PRODUCT PAGE — CATEGORY SIDEBAR
+============================================================ */
+.page-products .categories-box {
+    background: #f9f6f1;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.page-products .category-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1A1A1A;
+}
+
+.page-products .category-title-line {
+    width: 100%;
+    height: 2px;
+    background: #5B1A0F;
+}
+
+.page-products .category-list li {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.page-products .dot {
+    width: 8px;
+    height: 8px;
+    background: #1A1A1A;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.page-products .category-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1A1A1A;
+}
+
+/* ============================================================
+   PRODUCT PAGE — MODAL
+============================================================ */
+/* MODAL WIDTH */
+.page-products #productModal .modal-dialog {
+    max-width: 440px;
+    width: 95%;
+    margin: auto;
+}
+
+/* MODAL CONTAINER */
+.page-products .product-modal {
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* MODAL IMAGE */
+.page-products .product-modal-img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+    padding: 14px;
+}
+
+/* TITLE & DESCRIPTION */
+.page-products .modal-product-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.page-products .modal-product-description {
+    font-size: 14px;
+    color: #484848;
+    font-weight: 500;
+}
+
+/* PRICE */
+.page-products .modal-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #5B1A0F;
+}
+
+.page-products .modal-price .price-kg {
+    font-size: 12px;
+    color: #666;
+}
+
+/* WHATSAPP BUTTON */
+.page-products .whatsapp-btn-modal {
+    background: #E9D5C5;
+    border: 2px solid #D1B7A0;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #5B1A0F;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.page-products .whatsapp-btn-modal:hover {
+    background: #d8bfab;
+    color: #5B1A0F;
+}
+
+/* SCROLL SAFETY */
+.page-products #productModal .modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* ---------- MOBILE (≤576px) ---------- */
+@media (max-width: 576px) {
+
+    .page-products #productModal .modal-dialog {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .page-products .product-modal {
+        border-radius: 14px;
+    }
+
+    .page-products .product-modal-img {
+        max-height: 180px;
+        border-radius: 25px;
+        padding: 12px;
+    }
+
+    .page-products .modal-product-title {
+        font-size: 16px;
+    }
+
+    .page-products .modal-price {
+        font-size: 18px;
+    }
+
+    .page-products .whatsapp-btn-modal {
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+}
+
+
+
+/* Global overrides */
+@media (max-width: 576px) {
+    .product-img {
+        height: 180px;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-products .categories-box {
+        margin-bottom: 20px;
+    }
+
+    .product-img {
+        height: 200px;
+    }
+
+     .modal-dialog {
+        margin: 10px;
+    }
+}
+
+
+/* ============================================================
+   ABOUT PAGE — FIGMA SECTION
+============================================================ */
+
+.page-about .products-section{
+    background-color: #F6E5C9;
+    padding: 5px 0;
+    margin-top: 98px;
+}
+
+.page-about .section-title{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.page-about .section-subtitle{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #484848;
+}
+
+.page-about .figma-section {
+    padding: 48px 80px;
+}
+
+.page-about .figma-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.page-about .figma-image {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.page-about .figma-title {
+    font-size: 36px;
+    font-weight: 500;
+    color: #1A1A1A;
+    margin-bottom: 16px;
+}
+
+.page-about .figma-paragraph {
+    font-size: 16px;
+    color: #484848;
+    line-height: 150%;
+    margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .page-about .figma-section {
+        padding: 32px 32px;
+    }
+
+    .page-about .figma-title {
+        font-size: 30px;
+        margin-top: 10px ;
+    }
+
+    .page-about .figma-image {
+        max-width: 100%;
+        aspect-ratio: 16/10;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-about .figma-section {
+        padding: 24px 20px;
+    }
+
+    .page-about .figma-title {
+        font-size: 26px;
+    }
+
+    .page-about .figma-paragraph {
+        font-size: 15px;
+    }
+
+    .page-about .figma-image {
+        aspect-ratio: 4/3;
+    }
+}
+
+/* ============================================================
+   ABOUT PAGE — WHY CHOOSE US
+============================================================ */
+.page-about .why-choose-us {    
+    padding-bottom: 55px;
+    padding-top: 0px;
+}
+
+.page-about .why-choose-us h2 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.page-about .why-subtext {
+    font-size: 16px;
+    color: #484848;
+    max-width: 750px;
+}
+
+.page-about .why-card {
+    background: #fff;
+    border: 1px solid #E8E5DF;
+    border-radius: 24px;
+    padding: 20px;
+    transition: 0.2s ease;
+}
+
+.page-about .why-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.page-about .why-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 576px) {
+    .page-about .why-choose-us h2 {
+        font-size: 28px;
+    }
+
+    .page-about .why-subtext {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+}
+
+/* ============================================================
+   ABOUT PAGE — TASTE OF TRADITION SECTION
+============================================================ */
+.page-about .taste-tradition-section {
+    background: linear-gradient(90deg, #E3B088 0%, #FFDFC5 100%);
+    padding: 48px 80px;
+}
+
+.page-about .spice-stack-img {
+    width: 240px;
+    object-fit: contain;
+}
+
+.page-about .taste-title {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.page-about .taste-desc {
+    font-size: 16px;
+    font-weight: 500;
+    color: #484848;
+    line-height: 150%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.page-about .taste-btn {
+    width: 183px;
+    height: 44px;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background-color: #5B1A0F;
+    color: #FFFFFE;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .page-about .taste-tradition-section {
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-about .taste-tradition-section {
+        padding: 32px 20px;
+    }
+
+    .page-about .spice-stack-img {
+        width: 180px;
+        display: none;
+    }
+
+    .page-about .taste-title {
+        font-size: 28px;
+    }
+
+    .page-about .taste-desc {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-about .spice-stack-img {
+        display: none;
+    }
+
+    .page-about .taste-title {
+        font-size: 24px;
+    }
+}
+
+/* ============================================================
+   ABOUT PAGE — STILL CRAVING SECTION
+============================================================ */
+.page-about .still-craving {
+    background: linear-gradient(90deg, #E3B088 0%, #FFDFC5 100%);
+}
+
+.page-about .spice-img {
+    height: 180px;
+    object-fit: contain;
+    margin-left: auto;
+}
+
+.page-about .still-craving-goodness {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.page-about .View-all-Products {
+    width: 183px;
+    height: 44px;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background-color: #5B1A0F;
+    color: #FFFFFE;
+    text-decoration: none;
+}
+
+@media (max-width: 576px) {
+    .page-about .spice-img {
+        height: 130px;
+        margin: 0 auto;
+    }
+
+    .page-about .still-craving-goodness {
+        font-size: 24px;
+    }
+
+    .page-about .View-all-Products {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-about .still-craving-goodness {
+        font-size: 28px;
+    }
+}
+
+/* ============================================================
+   CONTACT PAGE — BASE LAYOUT
+============================================================ */
+body {
+    font-family: 'Jost', sans-serif;
+    background: #f9f6f1;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: medium;
+}
+
+/* Contact hero section */
+.page-contact .products-section {
+    background-color: #F6E5C9;
+    padding: 20px 80px;
+    margin-top: 97px;
+}
+
+.page-contact .section-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.page-contact .section-subtitle {
+    font-size: 1rem;
+    color: #484848;
+}
+
+/* ============================================================
+   CONTACT PAGE — MAIN CONTACT AREA
+============================================================ */
+.page-contact .contact-section {
+    background: #f9f6f1;
+    color: #484848;
+}
+
+.page-contact .contact-section h3,
+.page-contact .contact-section span {
+    color: #1A1A1A;
+}
+
+/* Image block */
+.page-contact .image-wrapper {
+    position: relative;
+    max-width: 420px;
+}
+
+.page-contact .styled-image {
+    width: 100%;
+    height: 280px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+    object-fit: cover;
+}
+
+.page-contact .image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    z-index: -1;
+}
+
+/* Text */
+.page-contact .message-away {
+    font-size: 20px;
+}
+
+.page-contact .message-away-subsection {
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-contact .contact-section .row {
+        text-align: center;
+    }
+
+    .page-contact .message-away {
+        font-size: 18px;
+    }
+
+    .page-contact .message-away-subsection {
+        font-size: 15px;
+    }
+
+    .page-contact .image-wrapper {
+        margin-top: 25px;
+    }
+
+    .page-contact .styled-image {
+        max-height: 260px;
+    }
+}
+
+/* ============================================================
+   CONTACT PAGE — TASTE & TRADITION BANNER
+============================================================ */
+.page-contact .tt-section {
+    background: linear-gradient(90deg, #E3B088 0%, #FFDFC5 100%);
+    padding: 48px 80px;
+}
+
+.page-contact .tt-image {
+    width: 240px;
+    height: 135px;
+    object-fit: contain;
+}
+
+.page-contact .tt-title {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.page-contact .tt-description {
+    font-size: 16px;
+    font-weight: 500;
+    color: #484848;
+}
+
+.page-contact .tt-btn {
+    background: #5B1A0F;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-contact .tt-section {
+        padding: 32px;
+    }
+
+    .page-contact .tt-image {
+        width: 180px;
+    }
+
+    .page-contact .tt-title {
+        font-size: 28px;
+    }
+}
+
+/* ============================================================
+   CONTACT PAGE — BEST SELLERS
+============================================================ */
+.page-contact .best-sellers-section {
+    background: #f9f6f1;
+}
+
+.page-contact .best-title {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.page-contact .best-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .page-contact .product-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        padding: 10px;
+    }
+
+    .page-contact .product-img {
+        height: 170px;
+    }
+
+    .page-contact .product-name {
+        font-size: 15px;
+    }
+
+    .page-contact .product-price {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-contact .product-img {
+        height: 150px;
+    }
+}
+
+/* ============================================================
+   CONTACT PAGE — NEWSLETTER
+============================================================ */
+.page-contact .newsletter-section {
+    background-color: #EFE8E7;
+    padding: 60px 40px;
+    border-radius: 12px;
+    margin: 60px 90px;
+}
+
+.page-contact .newsletter-img {
+    width: 180px;
+}
+
+.page-contact .newsletter-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.page-contact .newsletter-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #969696;
+}
+
+.page-contact .email-input {
+    height: 48px;
+    border-radius: 8px;
+    background: #FAFAFA;
+    border: 1px solid #E8E5DF;
+    padding-left: 12px;
+}
+
+.page-contact .subscribe-btn {
+    background-color: #5B1A0F;
+    color: #fff;
+    padding: 11px 34px;
+    border-radius: 8px;
+}
+
+@media (max-width: 576px) {
+    .page-contact .newsletter-form {
+        flex-direction: column;
+    }
+
+    .page-contact .subscribe-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .page-contact .newsletter-section {
+        margin: 30px 20px;
+        padding: 30px 20px;
+    }
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — VARIABLES
+============================================================ */
+.page-product-detail :root {
+    --bg: #FFFCF5;
+    --muted: #666666;
+    --accent: #5B1A0F;
+    --success: #03751C;
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — BREADCRUMB
+============================================================ */
+.page-product-detail .breadcrumb {
+    background: var(--bg);
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+}
+
+.page-product-detail .breadcrumb,
+.page-product-detail .breadcrumb-item,
+.page-product-detail .breadcrumb-item a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #B5B5B5;
+}
+
+/* Active item */
+.page-product-detail .breadcrumb-item.active {
+    color: #000;
+}
+
+/* Divider */
+.page-product-detail .breadcrumb-item + .breadcrumb-item {
+    padding-left: 6px;
+}
+
+.page-product-detail .breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    color: #B5B5B5;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-product-detail .breadcrumb-wrapper {
+        margin-top: 10px !important;
+    }
+
+    .page-product-detail .breadcrumb-item {
+        font-size: 12.5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-product-detail .breadcrumb {
+        flex-wrap: wrap;
+    }
+
+    .page-product-detail .breadcrumb-item {
+        font-size: 11.5px;
+    }
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — DESCRIPTION
+============================================================ */
+.page-product-detail .product-desc {
+    color: var(--muted);
+    margin-top: 10px;
+    max-width: 650px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — QUANTITY SELECTOR
+============================================================ */
+.page-product-detail .quantity-section {
+    margin-top: 4px;
+}
+
+.page-product-detail .quantity-title {
+    font-size: 16px;
+    color: #1A1A1A;
+}
+
+.page-product-detail .quantity-box {
+    margin-top: 5px;
+    border: 1.5px solid #1A1A1A;
+    width: 120px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Buttons */
+.page-product-detail .qty-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.page-product-detail .qty-number {
+    font-weight: 600;
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — ACTION BUTTONS
+============================================================ */
+.page-product-detail .button-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.page-product-detail .buy-now-btn {
+    background: #E9D5C5;
+    padding: 7px 34px;
+    width: 267px;
+    border-radius: 8px;
+    border: 2px solid #d6bfa5;
+    color: var(--accent);
+}
+
+.page-product-detail .add-cart-btn {
+    background: var(--accent);
+    padding: 8px 24px;
+    width: 267px;
+    border-radius: 8px;
+    color: #FFFFFE;
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — TABS
+============================================================ */
+.page-product-detail .product-tabs {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 12px;
+}
+
+.page-product-detail .tab-link {
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #A0A0A0;
+}
+
+.page-product-detail .tab-link.active {
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — PRICING & TITLE
+============================================================ */
+.page-product-detail .product-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.page-product-detail .new-price {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.page-product-detail .old-price,
+.page-product-detail .span-price {
+    font-size: 18px;
+    color: var(--muted);
+}
+
+.page-product-detail .span-price {
+    text-decoration: line-through;
+}
+
+.page-product-detail .discount {
+    margin-left: 65px;
+    color: var(--success);
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — RATINGS
+============================================================ */
+.page-product-detail .rating-star {
+    color: var(--success);
+}
+
+.page-product-detail .rating-value,
+.page-product-detail .rating-reviews {
+    font-size: 16px;
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — IMAGES / CAROUSEL
+============================================================ */
+.page-product-detail .carousel-item img,
+.page-product-detail .product-main-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 992px) {
+    .page-product-detail .product-main-img {
+        max-height: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-product-detail .product-main-img {
+        max-height: 300px;
+    }
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — RELATED PRODUCTS
+============================================================ */
+.page-product-detail .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.page-product-detail .product-card {
+    cursor: pointer;
+}
+
+.page-product-detail .product-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+@media (max-width: 992px) {
+    .page-product-detail .product-img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-product-detail .product-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-product-detail .product-img {
+        height: 180px;
+    }
+}
+
+/* Text */
+.page-product-detail .product-name {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.page-product-detail .product-price {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.page-product-detail .product-rating {
+    color: var(--success);
+    font-size: 14px;
+}
+
+.page-product-detail .price-rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — CUSTOMER REVIEWS
+============================================================ */
+.page-product-detail .customer-reviews {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.page-product-detail .review-star {
+    color: var(--success);
+}
+
+.page-product-detail .review-text {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.page-product-detail .review-footer {
+    color: #969696;
+    font-size: 14px;
+    padding-left: 62px;
+}
+
+/* ============================================================
+   PRODUCT DETAIL PAGE — NEWSLETTER
+============================================================ */
+.page-product-detail .newsletter-section {
+    background: #EFE8E7;
+    padding: 60px 40px;
+    border-radius: 12px;
+    margin: 60px 90px;
+}
+
+.page-product-detail .newsletter-img {
+    width: 180px;
+}
+
+.page-product-detail .newsletter-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.page-product-detail .newsletter-subtitle {
+    font-size: 16px;
+    color: var(--muted);
+}
+
+/* Email field */
+.page-product-detail .email-input {
+    height: 48px;
+    border-radius: 8px;
+    background: #FAFAFA;
+    border: 1px solid #E8E5DF;
+    padding-left: 12px;
+}
+
+.page-product-detail .subscribe-btn {
+    height: 44px;
+    width: 141px;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+}
+
+.page-product-detail .subscribe-btn:hover {
+    background: #511b11;
+}
+
+@media (max-width: 576px) {
+    .page-product-detail .newsletter-section {
+        margin: 30px 20px;
+        padding: 30px 20px;
+    }
+
+    .page-product-detail .subscribe-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* ============================================================
+   CART PAGE — GENERAL PAGE STRUCTURE
+============================================================ */
+.cart-page body {
+    font-family: 'Jost', sans-serif;
+    background: #FFFCF5;
+}
+
+.cart-page .container {
+    padding-left: 20px !important;
+}
+
+.cart-page .search-icon,
+.cart-page .phone-icon-1 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 800;
+}
+
+/* ============================================================
+   CART PAGE — BREADCRUMB
+============================================================ */
+.cart-page .breadcrumb-wrapper {
+    width: 100%;
+    padding: 0 12px;
+}
+
+.cart-page .breadcrumb {
+    background: #FFFCF5;
+    padding: 4px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-page .breadcrumb-item,
+.cart-page .breadcrumb-item a {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Chevron */
+.cart-page .breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    color: #B5B5B5;
+    font-size: 18px;
+}
+
+/* ============================================================
+   CART PAGE — CART TABLE
+============================================================ */
+.cart-page .cart-img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Quantity box */
+.cart-page .quantity-box {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    height: 34px;
+}
+
+.cart-page .quantity-box button {
+    width: 32px;
+    height: 34px;
+    background: #FFFCF5;
+    border: none;
+    font-size: 18px;
+}
+
+.cart-page .quantity-box input {
+    width: 40px;
+    border: none;
+    text-align: center;
+    background: transparent;
+}
+
+.cart-page .remove-btn {
+    background: transparent;
+    font-size: 26px;
+}
+
+/* Mobile table behavior */
+@media(max-width: 768px) {
+    .cart-page .cart-table thead {
+        display: none;
+    }
+
+    .cart-page .cart-table tr {
+        display: block;
+        padding: 12px;
+        margin-bottom: 18px;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+    }
+
+    .cart-page .cart-table td {
+        display: block;
+        text-align: right;
+        position: relative;
+        padding: 8px 0;
+    }
+
+    .cart-page .cart-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+@media(max-width: 480px) {
+    .cart-page .cart-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .cart-page .quantity-box {
+        height: 32px;
+    }
+
+    .cart-page .quantity-box button {
+        width: 28px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .cart-page .quantity-box input {
+        width: 36px;
+        font-size: 14px;
+    }
+}
+
+/* ============================================================
+   CART PAGE — SUMMARY BOX
+============================================================ */
+.cart-page .summary-card {
+    background: #FFFFFE;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+}
+
+.cart-page .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #969696;
+}
+
+.cart-page .summary-row .span-price {
+    color: #1A1A1A;
+}
+
+.cart-page .summary-row.total {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cart-page .checkout-btn {
+    background: #5b1f14;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.cart-page .continue-btn {
+    background: #e9d9cd;
+    color: #5b1f14;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* ============================================================
+   CART PAGE — NEWSLETTER
+============================================================ */
+.cart-page .newsletter-section {
+    background-color: #EFE8E7;
+    padding: 60px 40px;
+    border-radius: 12px;
+    margin: 60px 90px;
+}
+
+.cart-page .newsletter-img {
+    width: 180px;
+}
+
+.cart-page .newsletter-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.cart-page .newsletter-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #969696;
+}
+
+.cart-page .email-input {
+    height: 48px;
+    border-radius: 8px;
+    background: #FAFAFA;
+    border: 1px solid #E8E5DF;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .cart-page .newsletter-form {
+        flex-direction: column;
+    }
+
+    .cart-page .subscribe-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .cart-page .newsletter-section {
+        margin: 30px 20px;
+        padding: 30px 20px;
+    }
+}
+
+/* ============================================================
+   CHECKOUT PAGE — BREADCRUMB
+============================================================ */
+.checkout-page .breadcrumb {
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+}
+
+.checkout-page .breadcrumb-item,
+.checkout-page .breadcrumb-item a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #969696;
+}
+
+.checkout-page .breadcrumb-item.active {
+    color: #000;
+}
+
+.checkout-page .breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    font-size: 18px;
+    color: #B5B5B5;
+}
+
+/* ============================================================
+   CHECKOUT PAGE — NEWSLETTER
+============================================================ */
+.checkout-page .newsletter-section {
+    background-color: #EFE8E7;
+    padding: 60px 40px;
+    border-radius: 12px;
+    margin: 60px 90px;
+}
+
+.checkout-page .newsletter-img {
+    width: 180px;
+}
+
+.checkout-page .newsletter-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.checkout-page .newsletter-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.checkout-page .email-input {
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #E8E5DF;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .checkout-page .newsletter-form {
+        flex-direction: column;
+    }
+
+    .checkout-page .subscribe-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* ============================================================
+   CHECKOUT PAGE — FORM ELEMENTS
+============================================================ */
+.checkout-page .section-title {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.checkout-page .form-label {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.checkout-page .custom-input {
+    background: #FFFFFE;
+    border-radius: 4px;
+    border: 1px solid #D2D2D2;
+    height: 48px;
+}
+
+.checkout-page .custom-input-card {
+    border: 1px solid #D2D2D2;
+    background: #FFFCF5;
+}
+
+/* ============================================================
+   CHECKOUT PAGE — ORDER SUMMARY
+============================================================ */
+.checkout-page .order-box {
+    background: #fff;
+    border-radius: 12px;
+}
+
+.checkout-page .order-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.checkout-page .qty-btn {
+    border: 1px solid #532a1a;
+    background: transparent;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.checkout-page .summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+.checkout-page .checkout-btn {
+    background-color: #6a2b1b;
+    border: none;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .checkout-page .order-box {
+        margin-top: 20px;
+    }
+}
+/* ============================================================
+                            NAVBAR
+============================================================ */
+nav {
+    background: #FFF9ED;
+    color: #484848;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: #444;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    width: 28px;
+    height: 28px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23333' viewBox='0 0 30 30'%3e%3cpath stroke='%23333' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-nav .nav-link.nav-active {
+    color: #5B1A0F;
+    position: relative;
+    transition: all 0.3s ease-in-out; 
+}
+
+.navbar-nav .nav-link.nav-active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #5B1A0F; 
+    bottom: -5px;
+    left: 0;
+}
+
+
+.navbar-nav .nav-link:hover::after {
+
+    width: 100%; 
+}
+
+@media (max-width: 576px) {
+    .nav-phone-search {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+
+/* ============================================================
+                            FOOTER
+============================================================ */
+.footer-main,
+.footer-main * {
+    background: #3C322A; 
+    color: #e7dbcf;
+}
+
+.footer-title {
+    color: #FFFFFE;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: medium;
+    margin-bottom: 14px;
+}
+
+.footer-text-title{
+    color: #FFFFFE;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: medium;
+    margin-bottom: 14px;
+}
+
+.footer-text {
+    color: #FFFEFA;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    width: 90%; 
+    font-weight: 500;
+    font-style: medium;
+    
+}
+
+.footer-links {
+    list-style: none;
+    color: #FFFEFA;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-style: regular;
+    font-size:16px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    color: #FFFEFA;
+    font-size: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #FFFEFA;
+    font-size: 15px;
+}
+
+.footer-links a:hover {
+    color: #FFFEFA;
+}
+
+.footer-bottom {
+    background: #1E1915; 
+    color: #FFFFFE;
+    letter-spacing: 0.2px;
+    font-weight: 400;
+    font-style: regular;
+    font-size:16px;
+}

@@ -1,0 +1,64 @@
+<footer class="footer-main">
+    <div class="container pt-5 pb-3">
+        <div class="row">
+
+            <!-- Logo + Description -->
+            <div class="col-md-3 mb-4 mb-md-0">
+                {% if site_settings.footer_logo %}
+                <img src="{{ site_settings.footer_logo.url }}" width="95" class="mb-3" alt="Logo">
+                {% endif %}
+                <h6 class="footer-text-title">{{site_settings.site_name}}</h6>
+                <p class="footer-text">
+                    {{ site_settings.footer_description }}
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h6 class="footer-title ">Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'products' %}">Products</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Shop -->
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h6 class="footer-title">Shop</h6>
+                <ul class="footer-links">
+                    {% for cat in global_categories %}
+                    <li><a href="{% url 'products' %}?category={{ cat.slug }}">{{ cat.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Helpful Links -->
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h6 class="footer-title">Helpful Links</h6>
+                <ul class="footer-links">
+                    <li><a href="{% url 'refund_policy'%}">Refund Policy</a></li>
+                    <li><a href="{% url 'terms_conditions'%}">Terms & Conditions</a></li>
+                    <li><a href="{% url 'privacy_policy'%}">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="col-md-3">
+                <h6 class="footer-title">Contact Us</h6>
+                <ul class="footer-links">
+                    <li><i class="bi bi-telephone phone-icon me-2"></i> {{ site_settings.phone }}</li>
+                    <li><i class="bi bi-envelope mail-icon me-2"></i> <a href="mailto:{{ site_settings.contact_email }}">{{ site_settings.contact_email}}</a></li>
+                    <li><i class="bi bi-geo-alt location-icon me-2"></i> {{ site_settings.location}}</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom text-center py-3">
+        All Rights reserved {{ site_settings.copyright_holder }}
+    </div>
+</footer>

@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About{% endblock title %}
+{% block body_class %}page-about{% endblock body_class %}
+
+{% block content %}
+
+<!-- HEADER SECTION -->
+<section class="products-section pt-4">
+    <div class="container text-center">
+        <h2 class="section-title">
+            {{ about_main_title }}
+        </h2>
+        <p class="section-subtitle">
+            {{ about_subtitle }}
+        </p>
+    </div>
+</section>
+
+<!-- IMAGE + TEXT SECTION -->
+<section class="figma-section">
+  <div class="container-fluid figma-container">
+    <div class="row align-items-center gx-5">
+
+      <!-- Image -->
+      <div class="col-lg-5 col-md-12">
+        {% if about_main_image %}
+          <img src="{{ about_main_image }}" alt="About Image" class="figma-image">
+        {% endif %}
+      </div>
+
+      <!-- Text -->
+      <div class="col-lg-7 col-md-12">
+        <h2 class="figma-title">
+            {{ about_story_title }}
+        </h2>
+
+        <p class="figma-paragraph">
+            {{ about_story_p1 }}
+        </p>
+
+        <p class="figma-paragraph">
+            {{ about_story_p2 }}
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-choose-us">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-semibold mb-3">
+          {{ why_choose_title|default:"Why Choose Us" }}
+        </h2>
+        <p class="why-subtext mx-auto">
+          {{ why_choose_subtitle|default:"At Nellore Maharuchulu, we don’t just make food — we preserve tradition." }}
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        {% for reason in why_reasons %}
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="why-card p-4 text-center h-100">
+              <img src="{{ reason.icon.url }}" alt="{{ reason.title }}" width="48" class="mb-3">
+              <h6 class="fw-semibold mb-2">{{ reason.title }}</h6>
+              <p>{{ reason.text }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="taste-tradition-section">
+    <div class="container pt-12 pb-20">
+      <div class="row align-items-center">
+
+        <div class="col-md-2 text-center text-md-start mb-4 mb-md-0">
+          {% if taste_image %}
+            <img src="{{ taste_image }}" class="spice-stack-img mx-auto mx-md-0">
+          {% endif %}
+        </div>
+
+        <div class="col-md-8 text-center">
+          <h2 class="taste-title">
+            {{ taste_title|default:"Ready to Taste the Tradition?" }}
+          </h2>
+          <p class="taste-desc mt-2">
+            {{ taste_desc|default:"Browse our handmade products and order via WhatsApp." }}
+          </p>
+
+          <a href="{% url 'products' %}" class="taste-btn mt-4 d-inline-block">
+            View all Products →
+          </a>
+        </div>
+      </div>
+    </div>
+</section>
+
+{% endblock content %}

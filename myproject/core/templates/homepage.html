@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}home{% endblock title %}
+{% block body_class %}page-home{% endblock body_class %}
+
+{% block content %}
+    <!-- HERO -->
+    <div class="row container align-items-center hero-left-text">
+        <!-- Left Text -->
+        <div class="col-12 col-lg-6 mb-4 text-center text-lg-start">
+            <h1 class=" hero-title">
+                {{ site_settings.hero_title }}
+            </h1>
+            <p class="mt-3 hero-subtext">
+                {{ site_settings.hero_subtext}}
+            </p>
+            <a href="{% url 'products' %}" class="shop-now mt-4 ">Shop Now</a>
+        </div>
+
+        <!-- Right Image -->
+        <div class="col-12 col-lg-6 text-center">
+            <img src="{{site_settings.hero_image.url}}" class="hero-image" alt="Hero image">
+        </div>
+
+    </div>
+    <section class="container  hero-section">
+        <!-- CATEGORY CARDS -->
+        <div class="row  text-center g-4 category-wrap">
+
+            {% for category in global_categories %}
+            <div class="col-6 col-md-3">
+                <img src="{{category.category_image.url}}" class="category-card img-fluid mb-2" alt="{{ category.title }}">
+                <div class="category-title">{{ category.title }}</div>
+                <a href="{% url 'products' %}?category={{ category.slug }}" class="view-more">View More →</a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </section>
+
+    <!-- TRADITION -->
+    <section class="py-5 tradition-section">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+
+                <!-- Image -->
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <img src="{{site_settings.tradition_image.url}}" class="tradition-img" alt="Tradition image">
+                </div>
+
+                <!-- Text -->
+                <div class="col-12 col-md-8 text-center text-md-start">
+                    <h2 class=" tradition-title">
+                        {{ site_settings.tradition_title}}
+                    </h2>
+
+                    <p class="mt-3 tradition-text">
+                        {{ site_settings.tradition_paragraph1 }}
+                    </p>
+
+                    <p class="tradition-text">
+                        {{ site_settings.tradition_paragraph2 }}
+                    </p>
+
+                    <a href="{% url 'about' %}" class="know-more ">Know More →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BEST SELLERS -->
+    <section class="best-sellers-section pt-5 pb-5">
+        <div class="container">
+
+            <h2 class="best-title ">{{ site_settings.best_sellers_title}}</h2>
+            <p class="best-subtitle ">
+                {{ site_settings.best_sellers_subtitle }}
+            </p>
+
+            <div class="row g-4 justify-content-center">
+
+                {% for product in products %}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <a href="{% url 'products' %}?category={{ product.category.slug }}">
+                            <img src="{{product.product_image.url}}" class="product-img" alt="{{ product.name }}">
+                        </a>
+                        <div class="product-header">
+                            <h5 class="product-name">{{ product.name }}</h5>
+                            <div class="product-price">₹{{ product.price }}
+                                <span>/{{ product.unit|default:"kg" }}</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/{{ site_settings.whatsapp_number|default:'918965756562' }}?text={{ product.whatsapp_text|default:'I%20want%20to%20order%20' }}{{ product.name|urlencode }}" target="_blank" rel="noopener noreferrer" class="whatsapp-btn btn btn-success">
+                            <i class="bi bi-whatsapp"></i> Whatsapp to order
+                        </a>
+                    </div>
+                </div>
+                {% empty %}
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- STILL CRAVING -->
+    <section class="container py-10 still-craving">
+        <div class="row align-items-center gy-4 pb-5">
+
+            <!-- Image -->
+            <div class="col-12 col-md-2 text-center">
+                <img src="{{site_settings.still_craving_image.url}}" class="spice-img justify-content-center" alt="Condiments">
+            </div>
+
+            <!-- Text -->
+            <div class="col-12 col-md-8 text-center">
+                <h2 class="still-craving-goodness">{{ site_settings.still_craving_title }}</h2>
+                <p class="mt-2 text-muted">
+                    {{ site_settings.still_craving_subtext}}
+                </p>
+                <a href="{% url 'products' %}" class="View-all-Products mt-3 d-inline-block">View all Products →</a>
+            </div>
+
+        </div>
+    </section>
+    {% endblock content %}

@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact{% endblock title %}
+{% block body_class %}page-contact{% endblock body_class %}
+
+{% block content %}
+
+<!-- HEADER SECTION -->
+<section class="products-section">
+    <div class="container text-center">
+        <h2 class="section-title">
+            {{ contact_us_title|default:"Contact Us" }}
+        </h2>
+        <p class="section-subtitle">
+            {{ contact_page_subtext|default:"We’d love to hear from you — whether it’s for orders, feedback, or questions." }}
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT INFO SECTION -->
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT TEXT -->
+            <div class="col-lg-7">
+                <h3 class="mb-3 message-away">
+                    {{ contact_heading }}
+                </h3>
+
+                <p class="text-muted mb-4 message-away-subsection">
+                    {{ contact_description }}
+                </p>
+
+                <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-telephone me-2"></i>
+                    <span class="fw-medium">{{ site_settings.phone }}</span>
+                </div>
+
+                <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-envelope me-2"></i>
+                    <span class="fw-medium">{{ site_settings.contact_email }}</span>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-geo-alt me-2"></i>
+                    <span class="fw-medium">{{ site_settings.location }}</span>
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="col-lg-5 text-center">
+                {% if contact_image %}
+                    <img src="{{ contact_image }}" class="styled-image" alt="Contact Image">
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- BEST SELLERS -->
+<section class="best-sellers-section pt-5 pb-5">
+    <div class="container">
+
+        <h2 class="best-title">{{ best_sellers_title }}</h2>
+        <p class="best-subtitle">{{ best_sellers_subtitle }}</p>
+
+        <div class="row g-4">
+            {% for product in products %}
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card">
+                    <img src="{{ product.product_image.url }}" class="product-img" alt="{{ product.name }}">
+
+                    <div class="product-header">
+                        <h5 class="product-name">{{ product.name }}</h5>
+                        <div class="product-price">
+                            ₹{{ product.price }} <span>/{{ product.unit|default:"kg" }}</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/{{ site_settings.whatsapp_number }}?text={{ product.whatsapp_text|default:'I%20want%20to%20order%20' }}{{ product.name|urlencode }}"
+                       target="_blank"
+                       class="whatsapp-btn btn btn-success">
+                        <i class="bi bi-whatsapp"></i> Whatsapp to order
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="tt-section">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-md-2 text-center text-md-start">
+                {% if taste_image %}
+                    <img src="{{ taste_image }}" class="tt-image" alt="Condiments">
+                {% endif %}
+            </div>
+
+            <div class="col-md-8 text-center">
+                <h2 class="tt-title">{{ taste_title }}</h2>
+                <p class="tt-description mt-2">{{ taste_desc }}</p>
+
+                <a href="{% url 'products' %}" class="tt-btn mt-4 d-inline-block">
+                    View all Products →
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
