@@ -20,6 +20,7 @@ body {
     padding-top: 20px;
     padding-bottom: 50px;
 
+
 }
 .page-home .hero-title {
     font-size: 48px;
@@ -34,10 +35,10 @@ body {
 }
 
 .page-home .hero-image {
-    width: 700px;
-    height: 448px;
-    margin-top: -97px;
-    margin-left: -40px;
+    width: 730px;
+    height: 500px;
+    margin-top: -70px;
+    margin-left: -150px;
     object-fit: contain;
 }
 
@@ -293,6 +294,9 @@ body {
     cursor: pointer;
 }
 
+.whatsapp-btn i {
+    margin-right: 5px;
+}
 
 /* Product responsiveness */
 @media (max-width: 576px) {
@@ -506,6 +510,10 @@ body {
     align-items: center;
 }
 
+.page-products .whatsapp-btn-modal i{
+    margin-right: 8px;
+}
+
 .page-products .whatsapp-btn-modal:hover {
     background: #d8bfab;
     color: #5B1A0F;
@@ -540,12 +548,12 @@ body {
     }
 
     .page-products .modal-price {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .page-products .whatsapp-btn-modal {
         padding: 8px 16px;
-        font-size: 15px;
+        font-size: 12px;
     }
 }
 

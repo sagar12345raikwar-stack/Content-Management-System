@@ -5,27 +5,29 @@
 
 {% block content %}
     <!-- HERO -->
-    <div class="row container align-items-center hero-left-text">
-        <!-- Left Text -->
-        <div class="col-12 col-lg-6 mb-4 text-center text-lg-start">
-            <h1 class=" hero-title">
-                {{ site_settings.hero_title }}
-            </h1>
-            <p class="mt-3 hero-subtext">
-                {{ site_settings.hero_subtext}}
-            </p>
-            <a href="{% url 'products' %}" class="shop-now mt-4 ">Shop Now</a>
+    <section class="hero-section">
+        <div class="container"> <div class="row align-items-center">
+                
+                <div class="col-12 col-lg-6 text-center text-lg-start">
+                    <h1 class="hero-title">
+                        {{ site_settings.hero_title }}
+                    </h1>
+                    <p class="mt-3 hero-subtext">
+                        {{ site_settings.hero_subtext }}
+                    </p>
+                    <a href="{% url 'products' %}" class="shop-now mt-4 ">Shop Now</a>
+                </div>
+    
+                <div class="col-12 col-lg-6 text-center">
+                    <img src="{{site_settings.hero_image.url}}" class="hero-image" alt="Hero image">
+                </div>
+    
+            </div>
         </div>
-
-        <!-- Right Image -->
-        <div class="col-12 col-lg-6 text-center">
-            <img src="{{site_settings.hero_image.url}}" class="hero-image" alt="Hero image">
-        </div>
-
-    </div>
+    </section>
     <section class="container  hero-section">
         <!-- CATEGORY CARDS -->
-        <div class="row  text-center g-4 category-wrap">
+        <div class="row  text-center g-3 category-wrap">
 
             {% for category in global_categories %}
             <div class="col-6 col-md-3">
