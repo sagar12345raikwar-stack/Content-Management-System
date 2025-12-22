@@ -8,9 +8,6 @@ body {
     font-size: 16px;
 }
 
-/* Remove padding inconsistencies */
-
-
 /* ============================================================
    HOME PAGE — HERO SECTION
 ============================================================ */
@@ -132,7 +129,7 @@ body {
     .page-home .hero-image {
         width: 100%;
         height: auto;
-        margin: 32px auto 0; /* top margin + horizontal centering */
+        margin: 32px auto 0; 
         max-width: 320px; 
         margin-left: 0;
     }
