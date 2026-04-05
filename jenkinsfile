@@ -1,0 +1,79 @@
+pipeline {
+    agent none
+
+    environment {
+        APP_NAME = "my-app"
+        LOG_DIR = "/tmp/jenkins-logs"
+    }
+
+    stages {
+
+        // ---------------------------
+        // STAGE 1: CHECKOUT (AGENT 1)
+        // ---------------------------
+        stage('Checkout') {
+            agent { label 'agent-1' }
+
+            steps {
+                echo "Running on Agent-1"
+                git url: 'git@github.com:sagar12345raikwar-stack/Content-Management-System.git', branch: 'branch-1'
+            }
+        }
+
+        // ---------------------------
+        // STAGE 2: BUILD (AGENT 2)
+        // ---------------------------
+        stage('Build') {
+            agent { label 'agent-2' }
+
+            steps {
+                echo "Running on Agent-2"
+                sh '''
+                    echo "Building application..."
+                    mkdir -p build
+                    echo "Build successful" > build/output.txt
+                '''
+            }
+        }
+
+        // ---------------------------
+        // STAGE 3: TEST (FAILURE SIMULATION)
+        // ---------------------------
+        stage('Test') {
+            agent { label 'agent-1' }
+
+            steps {
+                echo "Running Tests..."
+                sh '''
+                    echo "Simulating failure..."
+                    exit 1
+                '''
+            }
+        }
+    }
+
+    // ---------------------------
+    // POST ACTIONS (FAILURE HANDLING)
+    // ---------------------------
+    post {
+
+        failure {
+            echo "Build Failed!"
+
+            // Mock notification
+            sh 'echo "ALERT: Build failed!"'
+
+            // Save logs
+            sh '''
+                mkdir -p $LOG_DIR
+                echo "Failure log at $(date)" > $LOG_DIR/failure.log
+            '''
+        }
+
+        always {
+            // Cleanup old artifacts
+            echo "Cleaning workspace..."
+            cleanWs()
+        }
+    }
+}
