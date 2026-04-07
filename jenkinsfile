@@ -10,7 +10,9 @@ pipeline {
         stage('Checkout') {
             agent { label 'agent-1' }
             steps {
-                git url: 'git@github.com:sagar12345raikwar-stack/Content-Management-System.git', branch: 'branch-1'
+                git branch: 'branch-1',
+                credentialsId: 'Project2-key',
+                url: 'git@github.com:sagar12345raikwar-stack/Content-Management-System.git'
             }
         }
 
